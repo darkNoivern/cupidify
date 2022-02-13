@@ -151,9 +151,14 @@ const NewUserlist = () => {
                                                     className="col mt-4 col-12 py-3 px-1 flexy">
                                                     <>
                                                         <div
-                                                            onClick={() => {
+                                                            onClick={(event) => {
                                                                 if (user.email !== email) {
-                                                                    setPopup(true);
+                                                                    // console.log(event.target)
+                                                                    ((event.target.classList.includes('button')) ?
+                                                                        setPopup(false)
+                                                                    :
+                                                                        setPopup(true))
+                                                                    
                                                                     setForm({
                                                                         ...form, taggeduserid: user.id,
                                                                         taggeduser: user.name,
@@ -166,7 +171,10 @@ const NewUserlist = () => {
                                                             }}
                                                             className='profile_card py-1 px-2 row mx-0'>
                                                             <div className='flexy col col-4'>
-                                                                <a href={user.socialaccount} target="_blank" className="button ui mouserat text-white bg-valentine mx-0 profile_card_button">Profile</a>
+                                                                <a href={user.socialaccount} onClick={(event) => { 
+                                                                    // console.log(event); 
+                                                                    setPopup(false) 
+                                                                }} target="_blank" className="button ui mouserat text-white bg-valentine mx-0 profile_card_button">Profile</a>
                                                             </div>
                                                             <div className='flexy text-center text-white leaderboard-text col-6'>{user.name}</div>
                                                             <div className='flexy col col-2'>
