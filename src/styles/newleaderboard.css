@@ -7,7 +7,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
 }
 
 /* .position{
