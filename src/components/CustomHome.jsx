@@ -25,7 +25,7 @@ const CustomHome = () => {
     return (
         <>
             <div className='custom-home-page'>
-                <div className='d-flex justify-content-sm-center justify-content-start align-items-center custom-home-heading'>
+                <div className='mb-5 d-flex justify-content-sm-center justify-content-start align-items-center custom-home-heading'>
                     <div className='cinzel custom-home-heading-text me-1 ms-0'>Cupidi&Phi;</div>
                     <div>
                         <img className='cupidimg' src={cupid} alt="" />
