@@ -8,9 +8,12 @@
   background-position: center;
   background-size: cover;
   position: absolute;
+}
+.scroll-respect{
+  height: 100%;
+  width: 100%;
   overflow-y: scroll !important;
 }
-
 .search_people{
   padding: 13px;
   border: 1px solid #FF2E63;

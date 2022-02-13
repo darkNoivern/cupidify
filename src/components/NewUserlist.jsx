@@ -16,7 +16,7 @@ import { useSelector } from "react-redux"; import {
 } from "firebase/firestore";
 
 const NewUserlist = () => {
-    
+
     const substituteData = useSelector(state => state);
     const email = substituteData.email;
 
@@ -107,24 +107,26 @@ const NewUserlist = () => {
 
     return (
         <>
-            <div class="userlist-background pb-5">
-                <div className='text-white userlist-heading my-4 flexy'>
-                    Userlist
-                </div>
-                <div class="input-container flexy my-4 px-3">
-                    <input
-                        type="text"
-                        name="Name"
-                        placeholder="Search People ... "
-                        class="search_user_input form-control ps-4 text-white" 
-                        onChange={(event) => { setSearch(event.target.value) }}
-                        value={search}
-                    />
-                </div>
+            <div class="userlist-background">
+                <div className="scroll-respect pb-5">
+                    {/* </div> */}
+                    <div className='text-white userlist-heading my-4 flexy'>
+                        Userlist
+                    </div>
+                    <div class="input-container flexy my-4 px-3">
+                        <input
+                            type="text"
+                            name="Name"
+                            placeholder="Search People ... "
+                            class="search_user_input form-control ps-4 text-white"
+                            onChange={(event) => { setSearch(event.target.value) }}
+                            value={search}
+                        />
+                    </div>
 
-                <div className="userlistcontainer">
-                    <div className="row mx-0">
-                        {/* <div className="col col-12 px-2 flexy">
+                    <div className="userlistcontainer">
+                        <div className="row mx-0">
+                            {/* <div className="col col-12 px-2 flexy">
                             <div class="contacts smaller-block d-flex align-items-center justify-content-between">
                                 <div class="userlist-profile-pic">
                                 </div>
@@ -134,108 +136,108 @@ const NewUserlist = () => {
                                 <a href="social_media.com" target='_blank' class="text-white button ui bg-valentine userlist-profile-button">Profile</a>
                             </div>
                         </div> */}
-                        {
-                        list.length === 0 ? <>
-                            <div className='col col-12 mt-4 p-3 text-white flexy'>
-                                <div className="profile_card py-1 px-3 flexy mt-4">
-                                    Sorry this user is not present ; Search something else
-                                </div>
-                            </div>
-                        </> :
-                            list.map((user, index) => {
-                                return (
-                                    <>
-                                        <div key={index}
-                                            className="col mt-4 col-12 py-3 px-1 flexy">
+                            {
+                                list.length === 0 ? <>
+                                    <div className='col col-12 mt-4 p-3 text-white flexy'>
+                                        <div className="profile_card py-1 px-3 flexy mt-4">
+                                            Sorry this user is not present ; Search something else
+                                        </div>
+                                    </div>
+                                </> :
+                                    list.map((user, index) => {
+                                        return (
                                             <>
-                                                <div
-                                                    onClick={() => {
-                                                        if (user.email !== email) {
-                                                            setPopup(true);
-                                                            setForm({
-                                                                ...form, taggeduserid: user.id,
-                                                                taggeduser: user.name,
-                                                                taggedusermail: user.email,
-                                                                taggeduserprofile: user.socialaccount,
-                                                                taggedusercount: user.count,
-                                                                taggeduserphoto: user.photourl,
-                                                            });
-                                                        }
-                                                    }}
-                                                    className='profile_card py-1 px-2 row mx-0'>
-                                                <div className='flexy col col-4'>
-                                                        <a href={user.socialaccount} target="_blank" className="button ui mouserat text-white bg-valentine mx-0 profile_card_button">Profile</a>
-                                                    </div>
-                                                    <div className='flexy text-center text-white leaderboard-text col-6'>{user.name}</div>
-                                                    <div className='flexy col col-2'>
-                                                        <img src={user.photourl} alt="profile pic" className='userlist-profile-pic' />
-                                                    </div>
+                                                <div key={index}
+                                                    className="col mt-4 col-12 py-3 px-1 flexy">
+                                                    <>
+                                                        <div
+                                                            onClick={() => {
+                                                                if (user.email !== email) {
+                                                                    setPopup(true);
+                                                                    setForm({
+                                                                        ...form, taggeduserid: user.id,
+                                                                        taggeduser: user.name,
+                                                                        taggedusermail: user.email,
+                                                                        taggeduserprofile: user.socialaccount,
+                                                                        taggedusercount: user.count,
+                                                                        taggeduserphoto: user.photourl,
+                                                                    });
+                                                                }
+                                                            }}
+                                                            className='profile_card py-1 px-2 row mx-0'>
+                                                            <div className='flexy col col-4'>
+                                                                <a href={user.socialaccount} target="_blank" className="button ui mouserat text-white bg-valentine mx-0 profile_card_button">Profile</a>
+                                                            </div>
+                                                            <div className='flexy text-center text-white leaderboard-text col-6'>{user.name}</div>
+                                                            <div className='flexy col col-2'>
+                                                                <img src={user.photourl} alt="profile pic" className='userlist-profile-pic' />
+                                                            </div>
+                                                        </div>
+                                                    </>
                                                 </div>
                                             </>
-                                        </div>
-                                    </>
-                                )
-                            })
-                    }
+                                        )
+                                    })
+                            }
+                        </div>
                     </div>
-                </div>
 
-                
-            {popup && (
-                <div className="popup">
-                    <div className="popup-inner bg-color60 p-4">
-                        <h1 className="text-white">Send Your Dil ki Baat</h1>
-                        <form
-                            onSubmit={(event) => {
-                                event.preventDefault();
-                            }}
-                        >
-                            <div className="form-group mb-3">
-                                <label className="text-white mb-2">Text</label>
-                                <textarea
-                                    className="form-control bg-dark text-white"
-                                    type="text"
-                                    placeholder="Enter your secret ..."
-                                    value={form.title}
-                                    onChange={(event) => {
-                                        setForm({ ...form, text: event.target.value });
+
+                    {popup && (
+                        <div className="popup">
+                            <div className="popup-inner bg-color60 p-4">
+                                <h1 className="text-white">Send Your Dil ki Baat</h1>
+                                <form
+                                    onSubmit={(event) => {
+                                        event.preventDefault();
                                     }}
-                                />
-                            </div>
-                            <div className="d-flex justify-content-between">
-                                {form.text === "" ?
-                                    <button
-                                        disabled
-                                        onClick={() => {
-                                            handleSubmit();
-                                        }}
-                                        className="ui button text-white bg-valentine round-corner mx-0"
-                                    >
-                                        Send
-                                    </button> : <button
-                                        onClick={() => {
-                                            handleSubmit();
-                                        }}
-                                        className="ui button text-white bg-valentine round-corner mx-0"
-                                    >
-                                        Send
-                                    </button>}
-                                <button
-                                    onClick={() => {
-                                        resetForm();
-                                        setPopup(false);
-                                    }}
-                                    className="button mx-0 ui bg-light text-valentine round-corner"
                                 >
-                                    Close
-                                </button>
+                                    <div className="form-group mb-3">
+                                        <label className="text-white mb-2">Text</label>
+                                        <textarea
+                                            className="form-control bg-dark text-white"
+                                            type="text"
+                                            placeholder="Enter your secret ..."
+                                            value={form.title}
+                                            onChange={(event) => {
+                                                setForm({ ...form, text: event.target.value });
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="d-flex justify-content-between">
+                                        {form.text === "" ?
+                                            <button
+                                                disabled
+                                                onClick={() => {
+                                                    handleSubmit();
+                                                }}
+                                                className="ui button text-white bg-valentine round-corner mx-0"
+                                            >
+                                                Send
+                                            </button> : <button
+                                                onClick={() => {
+                                                    handleSubmit();
+                                                }}
+                                                className="ui button text-white bg-valentine round-corner mx-0"
+                                            >
+                                                Send
+                                            </button>}
+                                        <button
+                                            onClick={() => {
+                                                resetForm();
+                                                setPopup(false);
+                                            }}
+                                            className="button mx-0 ui bg-light text-valentine round-corner"
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    )}
+
                 </div>
-            )}
-
-
             </div>
         </>
     )
