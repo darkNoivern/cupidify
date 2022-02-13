@@ -153,11 +153,13 @@ const NewUserlist = () => {
                                                         <div
                                                             onClick={(event) => {
                                                                 if (user.email !== email) {
-                                                                    // console.log(event.target)
-                                                                    ((event.target.classList.includes('button')) ?
-                                                                        setPopup(false)
-                                                                    :
-                                                                        setPopup(true))
+                                                                    const clist = event.target.classList
+                                                                    console.log(event.target.classList)
+                                                                    console.log(clist[0])
+                                                                    // ((event.target.classList.includes('button')) ?
+                                                                        setPopup(!clist.contains('button'))
+                                                                    // :
+                                                                        // setPopup(true))
                                                                     
                                                                     setForm({
                                                                         ...form, taggeduserid: user.id,
