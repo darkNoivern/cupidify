@@ -154,8 +154,8 @@ const NewUserlist = () => {
                                                             onClick={(event) => {
                                                                 if (user.email !== email) {
                                                                     const clist = event.target.classList
-                                                                    console.log(event.target.classList)
-                                                                    console.log(clist[0])
+                                                                    // console.log(event.target.classList)
+                                                                    // console.log(clist[0])
                                                                     // ((event.target.classList.includes('button')) ?
                                                                         setPopup(!clist.contains('button'))
                                                                     // :
