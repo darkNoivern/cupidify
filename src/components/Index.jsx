@@ -14,6 +14,7 @@ import NewNavbar from './NewNavbar';
 import CustomHome from './CustomHome';
 import NewUserlist from './NewUserlist';
 import NewLeaderboard from './NewLeaderboard';
+import Error from './Error'
 
 const Index = () => {
 
@@ -36,6 +37,7 @@ const Index = () => {
                     <Route exact path="/leaderboard" element={user === true ? <NewLeaderboard /> : <SignUp toggleUser={toggleUser} />} />
                     {/* <Route exact path="/signin" element={<SignIn toggleUser={toggleUser} />} /> */}
                     <Route exact path="/signup" element={<SignUp toggleUser={toggleUser} />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
             </Router>
         </>

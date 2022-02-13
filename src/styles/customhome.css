@@ -1,31 +1,39 @@
 .custom-home-heading{
     height: 10rem;
     width: 100vw;
+    background-color: white;
+    font-family: 'Cinzel', serif !important;
 }
 
 .cupidimg{
-    height: 8rem;
-    width: 8rem;
+    height: 7.8rem;
+    width: 8.5rem;
 }
-/* @media only screen and (max-width:768px) {
+@media only screen and (max-width:768px) {
     .cupidimg{
         height: 6rem;
-        width: 6rem;
+        width: 6.3rem;
     }
     
     .custom-home-heading-text{
         font-size: 3rem;
         letter-spacing: 0.05rem;
     }
-} */
+}
+
 .custom-home-content{
     height: calc(100vh - 10rem) !important;
     /* height: calc(100vh - 80px); */
     width: 99vw;
 }
 
+.lss{
+    letter-spacing: 0.2rem !important;
+}
+
 .custom-home-heading-text{
     font-size: 4rem;
+    /* letter-spacing: 0.2rem; */
 }
 .custom-home-content-text{
     font-size: 3rem;
@@ -46,4 +54,8 @@
     font-size: 3rem;
     letter-spacing: 0.3rem;
     line-height: 120%;
+}
+
+.subscribe-input{
+    font-size: 1.2rem !important;
 }

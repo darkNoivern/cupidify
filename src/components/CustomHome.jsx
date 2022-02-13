@@ -25,15 +25,15 @@ const CustomHome = () => {
     return (
         <>
             <div className='custom-home-page'>
-                <div className='d-flex justify-content-sm-center justify-content-start align-items-center custom-home-heading bg-light'>
-                    <div className='fatface custom-home-heading-text me-1 ms-0'>Cupidify</div>
+                <div className='d-flex justify-content-sm-center justify-content-start align-items-center custom-home-heading'>
+                    <div className='cinzel custom-home-heading-text me-1 ms-0'>Cupidi&Phi;</div>
                     <div>
                         <img className='cupidimg' src={cupid} alt="" />
                     </div>
                 </div>
                 <div className="custom-home-content row mx-0">
-                    <div className="col text-white col-md-6 col-12 px-2 text-center d-flex align-items-center custom-home-content-text fatface">
-                        This is the time to send love to your crush without her knowing it
+                    <div className="col text-white col-md-6 col-12 px-2 text-center d-flex align-items-center justify-content-center lss custom-home-content-text fatface">
+                        Our UI is hotter than your ex <br /> Now try to impress your next
                     </div>
                     <div className="col col-md-6 col-12 flexy px-0">
                         <img className='skipping-images' src={url[x]} alt="lovely-images" />
@@ -58,7 +58,7 @@ const CustomHome = () => {
                             <div className="col col-lg-4 col-12 flexy">
                                 <GlassTilt
                                     number="02"
-                                    title="Garunteed Partner"
+                                    title="Guaranteed Partner"
                                     desc="Isko use krliya toh love life jhingalala ."
                                 />
                             </div>
@@ -76,7 +76,7 @@ const CustomHome = () => {
                 <div className="bg-dark text-valentine flexy">
                     <div className="about-width">
                         <div className="fatface-heading fatface text-white text-md-start text-center mt-5 mb-5">
-                            Joxx & FAQs
+                            FAQs (&nbsp;<del>Joxx</del>&nbsp;)
                         </div>
 
                         <div className="about-feature-desc mb-4">
@@ -105,7 +105,7 @@ const CustomHome = () => {
                         </div>
                         <div className="about-feature-desc mb-4">
                             <div className="faq mb-2 text-secondary">
-                            Can i spam my crush's name ??
+                                Can i spam my crush's name ??
                             </div>
                             <div className="faq-answer">
                                 Ummm !! You definately can but we won't recommend that .
@@ -113,32 +113,32 @@ const CustomHome = () => {
                         </div>
                         <div className="about-feature-desc mb-4">
                             <div className="faq mb-2 text-secondary">
-                            Why should i share my Fb link /Insta id ??
+                                Why should i share my Fb link /Insta id ??
                             </div>
                             <div className="faq-answer">
-                            Come On Guys !! We are not asking for Bank-PIN code
+                                Come On Guys !! We are not asking for Bank-PIN code
                             </div>
                         </div>
                         <div className="about-feature-desc mb-4">
                             <div className="faq mb-2 text-secondary">
-                            Why are some text differnt in colour in chat section
+                                Why are some text differnt in colour in chat section
                             </div>
                             <div className="faq-answer">
-                            <del>
-                            Because they are mutant texts. 
-                            </del>
-                            &nbsp;&nbsp;They are tagged users !! Click on them & BOOM !! their profiles open
+                                <del>
+                                    Because they are mutant texts.
+                                </del>
+                                &nbsp;&nbsp;They are tagged users !! Click on them & BOOM !! their profiles open
                             </div>
                         </div>
                         <div className="about-feature-desc mb-4">
                             <div className="faq mb-2 text-secondary">
-                            Why Cupidify💘 and not Tinder ??
+                                Why Cupidify💘 and not Tinder ??
                             </div>
                             <div className="faq-answer">
-                            <del>
-                            Because 9 out of 10 doctors ka yahi manna hai. 
-                            </del>
-                            &nbsp;&nbsp;Becuase you deserve better .
+                                <del>
+                                    Because 9 out of 10 doctors ka yahi manna hai.
+                                </del>
+                                &nbsp;&nbsp;Becuase you deserve better .
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@ const CustomHome = () => {
                                 className="form-control bg-dark text-white subscribe-input"
                             />
                             <button className="ui ms-4 me-0 button bg-valentine text-white mouse-rat">
-                                Subscribe
+                                Button Under Construction
                             </button>
                         </div>
                     </div>
@@ -164,13 +164,18 @@ const CustomHome = () => {
 
                 <div className="footer flexy">
                     <div>
-                        <div className="footer-icons d-flex justify-content-between">
-                            <i class="fab fa-twitter fa-2x" />
-                            <i class="fab fa-facebook fa-2x" />
-                            <i class="fab fa-instagram fa-2x" />
-                            <i class="fas fa-envelope-open-text fa-2x" />
+                        <div className="footer-icons flexy">
+                            <div>
+
+                                <i class="fab fa-twitter fa-2x me-4" />
+                                <i class="fab fa-facebook fa-2x me-4" />
+                                <i class="fab fa-instagram fa-2x me-4" />
+                                <i class="fas fa-envelope-open-text fa-2x" />
+                            </div>
                         </div>
-                        <div className="mt-3">© Copyright 2023 Cupidify</div>
+                        <div className="mt-3">
+                            © Copyright 2022 Cupidify | <a target="_blank" href="https://www.codechef.com/teams/view/valtyrk_123">Team Valtryek</a>
+                        </div>
                     </div>
                 </div>
 

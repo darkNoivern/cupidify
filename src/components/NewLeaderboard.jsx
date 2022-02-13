@@ -35,7 +35,7 @@ const NewLeaderboard = () => {
 
     return (
         <>
-            <div class="backimg" >
+            <div class="leaderboard-back-image pb-5" >
                 <div class="text-white leaderboard_heading my-4 flexy">
                     <div class="custom_leaderboard_heading flexy pt-2 px-4">
                         LEADERBOARD

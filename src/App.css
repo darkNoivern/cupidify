@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -11,6 +11,10 @@
 
 .mouserat{
     font-family: 'Montserrat', sans-serif;
+}
+
+.cinzel{
+    font-family: 'Cinzel', serif !important;
 }
 
 .resize-bg{

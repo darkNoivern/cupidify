@@ -251,7 +251,7 @@ const NewSign = (props) => {
                                 {
                                     (fb !== "" || insta !== "" || lkn !== "") ?
 
-                                        <button class=" mb-5 mt-3 button ui submit-btn mouserat">
+                                        <button onClick={() => signUpWithGoogle()} class=" mb-5 mt-3 button ui submit-btn mouserat">
                                             <i class="fab fa-google me-2"></i>Sign Up with Google
                                         </button> :
 

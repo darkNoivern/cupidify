@@ -107,7 +107,7 @@ const NewUserlist = () => {
 
     return (
         <>
-            <div class="userlist-background">
+            <div class="userlist-background pb-5">
                 <div className='text-white userlist-heading my-4 flexy'>
                     Userlist
                 </div>
