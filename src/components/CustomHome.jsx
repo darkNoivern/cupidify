@@ -138,7 +138,7 @@ const CustomHome = () => {
                                 <del>
                                     Because 9 out of 10 doctors ka yahi manna hai.
                                 </del>
-                                &nbsp;&nbsp;Becuase you deserve better .
+                                &nbsp;&nbsp;Because you deserve better .
                             </div>
                         </div>
                     </div>

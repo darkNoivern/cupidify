@@ -190,7 +190,7 @@ const NewSign = (props) => {
                                 <div class="alert alert-primary d-flex align-items-center" role="alert">
                                     <div>
                                         <i class="info circle icon" /> &nbsp;
-                                        Fill atleast 1 input (Honesty ploxx)
+                                        Fill atleast 1 input (Accepting real ids only)
                                     </div>
                                 </div>
 
