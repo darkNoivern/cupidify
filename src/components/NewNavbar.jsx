@@ -42,6 +42,9 @@ const NewNavbar = (props) => {
                                 <li className='d-flex justify-content-center mt-2'>
                                     <NavLink activeclassname='active' exact to="/leaderboard" className="px-3 pt-2 pb-1 mx-0 button ui nav-hamburger-link">Leaderboard</NavLink>
                                 </li>
+                                <li className='d-flex justify-content-center mt-2'>
+                                    <NavLink activeclassname='active' exact to="/games" className="px-3 pt-2 pb-1 mx-0 button ui nav-hamburger-link">Games</NavLink>
+                                </li>
 
                                 {props.user === true ?
                                     <li
