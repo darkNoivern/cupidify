@@ -6,6 +6,35 @@
     font-family: 'Cinzel', serif !important;
 }
 
+.about-feature-desc{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.footer {
+    min-height: 15rem;
+    color: gray;
+}
+
+.subscribe-input {
+    max-width: 35rem;
+    width: 90%;
+    border-radius: 2rem !important;
+}
+  
+.subscribe-input::placeholder {
+    color: gray !important;
+}
+  
+.newsletter-text {
+    font-size: 1.3rem;
+}
+  
+.fatface-heading{
+    font-size: 3rem;
+}  
+
+
 .cupidimg{
     height: 7.8rem;
     width: 8.5rem;
